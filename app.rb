@@ -18,8 +18,8 @@ FULL_HITPOINTS = 100
  get '/play' do
    @player1 = $player1.name
    @player2 = $player2.name
-   @hit_points_1 = FULL_HITPOINTS
-   @hit_points_2 = FULL_HITPOINTS
+   @hit_points_1 = $player1.hp
+   @hit_points_2 = $player1.hp
    erb :play
  end
 
