@@ -11,3 +11,11 @@ feature 'see hit points' do
     expect(page).to have_content 'Pikachu = 100'
   end
 end
+
+feature 'Attack player 2' do
+  scenario 'Attack Player 2' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_content 'Pikachu attacked Charizard'
+  end
+end
